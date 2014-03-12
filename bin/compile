@@ -30,6 +30,7 @@ if ! [ -e $BUILD_DIR/local/bin/carton ]; then
 fi
 
 echo "-----> Installing dependencies"
+[ -f $BUILD_DIR/cpanfile.snapshot ] || carton install
 carton install --deployment 2>&1 | indent
 
 echo "-----> Installing Starman"
