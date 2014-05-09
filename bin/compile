@@ -25,7 +25,7 @@ fi
 
 if ! [ -e $BUILD_DIR/local/bin/carton ]; then
   echo "-----> Installing carton"
-  cpanm Carton | indent
+  $BUILD_DIR/local/bin/cpanm Carton | indent
 fi
 
 echo "-----> Installing dependencies"
