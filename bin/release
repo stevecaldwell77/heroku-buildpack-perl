@@ -7,5 +7,5 @@ config_vars:
   PATH: local/bin:/usr/local/bin:/usr/bin:/bin
   PERL5LIB: /app/local/lib/perl5
 default_process_types:
-  web: perl -I/app/local/lib/perl5 local/bin/carton exec starman --port \$PORT --no-default-middleware
+  web: perl -I/app/local/lib/perl5 local/bin/carton exec starman --port \$PORT --no-default-middleware $STARMAN_OPTS
 EOF
